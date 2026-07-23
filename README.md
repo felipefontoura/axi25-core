@@ -92,6 +92,9 @@ result is byte-identical on Linux, macOS, and Windows (proven by the CI matrix).
 | **npm** | `npx @axi25/core …` | every vault (consume + update) |
 | **submodule** | mount at `.axi25/`, run `node .axi25/bin/axi25.mjs wire` | the "workshop" vault where you author skills |
 
+→ **Design rationale:** [docs/architecture.md](docs/architecture.md) · **operational runbooks**
+(update a vault, repoint, release, license flip): [docs/maintenance.md](docs/maintenance.md).
+
 ## Contributing
 
 Contributions are welcome — see **[CONTRIBUTING.md](CONTRIBUTING.md)**. The golden rule: edit the
