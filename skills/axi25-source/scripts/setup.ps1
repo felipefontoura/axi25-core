@@ -8,9 +8,6 @@
 $ErrorActionPreference = "Stop"
 Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Path)
 
-# mise users: running setup IS consent, so auto-trust this skill's own mise.toml (no-op without mise).
-if (Get-Command mise -ErrorAction SilentlyContinue) { mise trust 2>$null | Out-Null }
-
 if (Get-Command uv -ErrorAction SilentlyContinue) {
   uv python install 3.13
   uv sync

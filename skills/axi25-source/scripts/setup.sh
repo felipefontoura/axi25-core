@@ -9,10 +9,6 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-# mise users: running setup IS consent, so auto-trust this skill's own mise.toml — that
-# removes the one-time `mise trust` prompt when the shimmed `uv` runs. No-op without mise.
-command -v mise >/dev/null 2>&1 && mise trust >/dev/null 2>&1 || true
-
 if command -v uv >/dev/null 2>&1; then
   uv python install 3.13 || true
   uv sync
