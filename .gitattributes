@@ -1,0 +1,14 @@
+# axi25-core — line-ending normalization so projections hash identically on any OS.
+# The lockfile hashes are canonicalized in code too (bin/axi25.mjs · CRLF/CR→LF, strip BOM);
+# this is the second belt: committed files stay LF regardless of the contributor's platform.
+*.md    text eol=lf
+*.mjs   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.jsonc text eol=lf
+*.sh    text eol=lf
+*.ps1   text eol=lf
+*.yml   text eol=lf
+*.png   binary
+*.jpg   binary
+*.pdf   binary

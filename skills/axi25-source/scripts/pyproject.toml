@@ -1,0 +1,23 @@
+[project]
+name = "axi25-source"
+version = "2.0.0"
+description = "Cloud-first source acquisition: any raw media (local disk or internet) → clean Markdown in 10-sources/. One CLI (source.py) → book/article/stream/audio handlers. pip packages + one OpenRouter API key; no heavy local ML."
+requires-python = ">=3.10"
+dependencies = [
+    # book (pdf text/render/figures/cover — light, no ML)
+    "pymupdf>=1.24",
+    # book (epub → markdown, pure Python — replaces pandoc)
+    "markdownify>=0.13",
+    # article (web extraction, pure Python)
+    "trafilatura>=1.12",
+    # stream (download; ffmpeg comes from imageio-ffmpeg, not a host tool)
+    "yt-dlp>=2025.1.0",
+    "imageio-ffmpeg>=0.5",
+    # frontmatter serializer
+    "pyyaml>=6.0",
+]
+
+# App project, not a distributable package: uv installs deps into scripts/.venv and runs
+# source.py directly. `core/`, `handlers/`, `postprocess/` are local imports on sys.path.
+[tool.uv]
+package = false

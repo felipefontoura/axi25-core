@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test (${{ matrix.os }})
+    # The wire/lock hashing must be byte-identical on every OS — so the round-trip
+    # (init → verify → determinism → guard) runs on all three, not just Linux.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5 # respects .gitattributes → LF on checkout
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: node --check bin/axi25.mjs && node --check .ci/verify.mjs
+      - run: npm test
+
+  lint:
+    name: Lint (markdown)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npx --yes markdownlint-cli2 "**/*.md"

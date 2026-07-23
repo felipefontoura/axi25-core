@@ -1,0 +1,7 @@
+# Runtime state — never committed, never projected into a vault (see axi25 wire RUNTIME_IGNORE).
+.venv/
+.cache/
+.env
+__pycache__/
+*.pyc
+*.stt_tmp/

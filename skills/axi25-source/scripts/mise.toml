@@ -1,0 +1,6 @@
+[tools]
+python = "3.13"
+uv = "latest"
+
+# No ML caches to redirect (cloud-first): the old HF_HOME / TORCH_HOME / PYANNOTE_CACHE
+# env block is gone. mise is optional here — setup.sh/ps1 fall back to plain uv.
