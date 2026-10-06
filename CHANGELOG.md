@@ -6,6 +6,13 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+## [2.0.2] — 2026-10-06
+
+### Changed
+
+- Docs: npm and MIT badges, a pointer to the full `@axi25/vault`, and the release runbook now
+  covers npm's 2FA requirement and the vault package name.
+
 ## [2.0.1] — 2026-10-06
 
 ### Fixed
@@ -44,6 +51,7 @@ AXI25 vault. Behavior is now a single versioned source of truth that projects in
 
 - Distribution renamed to the scoped package **`@axi25/core`**.
 
-[Unreleased]: https://github.com/felipefontoura/axi25-core/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/felipefontoura/axi25-core/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/felipefontoura/axi25-core/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/felipefontoura/axi25-core/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/felipefontoura/axi25-core/releases/tag/v2.0.0
