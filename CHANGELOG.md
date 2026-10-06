@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Changed
+
+- Relicensed under the [MIT License](LICENSE); the package now publishes publicly.
+
 ## [2.0.0] — 2026-07-23
 
 The first release of **AXI25 Core** as a standalone, harness-agnostic vault OS extracted from the

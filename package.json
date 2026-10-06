@@ -50,6 +50,6 @@
     "url": "https://github.com/felipefontoura/axi25-core/issues"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }

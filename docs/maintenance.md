@@ -49,7 +49,7 @@ in the vault, then re-wire.
 git -C my-vault status --porcelain        # must be empty
 
 # 1. add the core as a submodule tracking main
-git -C my-vault submodule add -b main git@github.com:felipefontoura/axi25-core.git .axi25
+git -C my-vault submodule add -b main https://github.com/felipefontoura/axi25-core.git .axi25
 
 # 2. project it in
 node my-vault/.axi25/bin/axi25.mjs wire my-vault
@@ -91,18 +91,6 @@ npm publish
 
 Submodule consumers move to the new version with `git submodule update --remote .axi25 && wire`;
 npm consumers with `npx @axi25/core@latest update`.
-
-## Flip to an open-source license
-
-The repo ships **all the OSS scaffolding but a proprietary `LICENSE`** — going public is three edits:
-
-1. **`LICENSE`** — replace the proprietary text with the chosen OSI license (MIT / Apache-2.0 / …).
-2. **`package.json`** — set `"license"` to the SPDX id, and change
-   `"publishConfig": { "access": "restricted" }` → `"public"` so the scoped package can publish.
-3. **`README.md`** — add the real license badge and update the License section.
-
-Then `npm publish` works and the repo is genuinely open source. Nothing else in the repo assumes a
-particular license, so the flip is self-contained.
 
 ## Re-run a model bake-off
 
