@@ -1,6 +1,6 @@
 {
   "name": "@axi25/core",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "AXI25 core — a harness-agnostic wiki-llm vault OS (skills + contract) for Claude Code, OpenAI Codex, OpenCode, and Pi. Projects into any vault; single source of truth.",
   "type": "module",
   "bin": {

@@ -6,6 +6,13 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+## [2.0.1] — 2026-10-06
+
+### Fixed
+
+- `axi25-onboarding`: the scaffold hint now points to `npx @axi25/core init` (the published
+  package) instead of the unpublished `npx axi25 init`.
+
 ### Changed
 
 - Relicensed under the [MIT License](LICENSE); the package now publishes publicly.
@@ -37,5 +44,6 @@ AXI25 vault. Behavior is now a single versioned source of truth that projects in
 
 - Distribution renamed to the scoped package **`@axi25/core`**.
 
-[Unreleased]: https://github.com/felipefontoura/axi25-core/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/felipefontoura/axi25-core/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/felipefontoura/axi25-core/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/felipefontoura/axi25-core/releases/tag/v2.0.0

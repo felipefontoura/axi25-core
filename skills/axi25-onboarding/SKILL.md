@@ -43,7 +43,7 @@ guided tour that *ends with a vault that is already theirs* — not a lecture.
   want to re-run onboarding or just adjust something specific.
 - **Scaffold first if the vault is incomplete.** If the folder tree or key files are missing
   (e.g. the skills were installed from a marketplace into an otherwise empty folder), build the
-  environment before anything else: run `npx axi25 init` (or `bash install.sh`),
+  environment before anything else: run `npx @axi25/core init` (or `bash install.sh`),
   or create the missing folders + anchor files directly (see AGENTS.md § Self-healing
   environment). The user should never see a broken half-vault.
 - **Environment check next.** If a tool the user's path needs is missing (git for backups,
