@@ -8,6 +8,8 @@ One versioned source of truth — skills + contract + reference docs — that pr
 so the same behavior runs on **Claude Code · OpenAI Codex · OpenCode · Pi**, with zero setup.
 
 [![CI](https://github.com/felipefontoura/axi25-core/actions/workflows/ci.yml/badge.svg)](https://github.com/felipefontoura/axi25-core/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@axi25/core)](https://www.npmjs.com/package/@axi25/core)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ![node](https://img.shields.io/badge/node-%E2%89%A518-brightgreen)
 ![agent skills](https://img.shields.io/badge/agent%20skills-14-blue)
 ![deps](https://img.shields.io/badge/dependencies-0-brightgreen)
@@ -47,6 +49,10 @@ npx @axi25/core doctor    # check environment + core freshness
 ```
 
 Requires **Node ≥ 18** — that is the whole runtime. No other install.
+
+Want the complete, ready-to-use vault (Obsidian AI panel, docs, guided setup) instead of a bare
+one? Use [`@axi25/vault`](https://github.com/felipefontoura/axi25):
+`npx @axi25/vault@latest init my-vault`.
 
 ## Supported harnesses
 

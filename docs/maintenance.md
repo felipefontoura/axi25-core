@@ -85,9 +85,17 @@ git add -A && git commit -m "Release vX.Y.Z"
 git tag vX.Y.Z
 git push origin main --tags
 
-# 2. (once OSS — see below) publish to npm
-npm publish
+# 2. publish to npm
+npm publish                                  # add --otp=<code> if 2FA asks
 ```
+
+npm requires **two-factor auth** (or a granular access token with *bypass 2FA*) to publish; a
+logged-in account without either gets `403 Two-factor authentication ... is required`.
+
+The full vault ships separately as **`@axi25/vault`** (from the `axi25` repo; npm rejects the bare
+name `axi25` as too close to `axios`). Inside a vault, call it as `npx @axi25/vault@latest …`: the
+vault's own `package.json` carries that name, so a bare `npx @axi25/vault` resolves to the local
+folder and fails with `axi25: command not found`.
 
 Submodule consumers move to the new version with `git submodule update --remote .axi25 && wire`;
 npm consumers with `npx @axi25/core@latest update`.
