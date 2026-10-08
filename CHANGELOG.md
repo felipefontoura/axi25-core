@@ -14,6 +14,7 @@ All notable changes to this project are documented here. The format is based on
 
 ### Changed
 
+- README: a "Data handling and privacy" section; the plugin manifest links to it, to the issues page and to the docs.
 - `axi25-doctor`: on Windows it no longer suggests `-ExecutionPolicy Bypass`; the user decides.
 
 ## [2.0.2] — 2026-10-06

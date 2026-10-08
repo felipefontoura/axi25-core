@@ -124,6 +124,27 @@ result is byte-identical on Linux, macOS, and Windows (proven by the CI matrix).
 → **Design rationale:** [docs/architecture.md](docs/architecture.md) · **operational runbooks**
 (update a vault, repoint, release): [docs/maintenance.md](docs/maintenance.md).
 
+## Data handling and privacy
+
+- **Your notes stay on your machine.** The skills read and write plain Markdown in your own vault.
+  Journal and capture notes can contain personal data; nothing is uploaded unless you use the
+  one skill below.
+- **No backend, no accounts, no telemetry.** The maintainer receives and retains nothing. The CLI
+  makes no network calls.
+- **One skill sends data off your machine: `axi25-source`**, and only when you ask it to acquire
+  a source. Depending on the input it sends audio (transcription, speaker diarization), page
+  images of scanned PDFs (OCR) or text (cleanup) to [OpenRouter](https://openrouter.ai), which
+  routes it to the model provider, using your own `OPENROUTER_API_KEY`. The key is read from your
+  environment or from the skill's own `scripts/.env` and goes only to `openrouter.ai`. Retention
+  is governed by OpenRouter's and the provider's terms. Don't use the skill and nothing leaves.
+- **URL sources** are downloaded from the address you give (articles, videos). The optional
+  `--cookies` argument takes a cookie file you point to; the skill never looks for browser
+  cookies on its own.
+- **`axi25-doctor` installs tools only after your explicit "yes"**, with the exact command shown
+  first.
+
+Questions or concerns: [open an issue](https://github.com/felipefontoura/axi25-core/issues).
+
 ## Contributing
 
 Contributions are welcome — see **[CONTRIBUTING.md](CONTRIBUTING.md)**. The golden rule: edit the
