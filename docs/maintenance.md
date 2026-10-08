@@ -75,11 +75,12 @@ personalization seam) or a separate vault doc, not in the generated file.
 
 ## Release a new version
 
-Versions follow [SemVer](https://semver.org). The version lives in `package.json`.
+Versions follow [SemVer](https://semver.org). The version lives in `package.json` and is mirrored in `.claude-plugin/plugin.json`.
 
 ```bash
 # 1. bump the version + add a CHANGELOG entry
-#    (edit package.json "version" and CHANGELOG.md's [Unreleased] → [x.y.z])
+#    (edit package.json "version", .claude-plugin/plugin.json "version" — `npm test` fails if they
+#    differ — and CHANGELOG.md's [Unreleased] → [x.y.z])
 npm test && npm run lint                     # green locally
 git add -A && git commit -m "Release vX.Y.Z"
 git tag vX.Y.Z

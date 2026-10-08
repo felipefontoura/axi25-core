@@ -6,6 +6,16 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Added
+
+- Claude Code plugin: `.claude-plugin/plugin.json` (with version and icon) and
+  `marketplace.json`, so the skills install with `/plugin marketplace add felipefontoura/axi25-core`.
+- `npm test` checks that the plugin manifest version matches `package.json`.
+
+### Changed
+
+- `axi25-doctor`: on Windows it no longer suggests `-ExecutionPolicy Bypass`; the user decides.
+
 ## [2.0.2] — 2026-10-06
 
 ### Changed
