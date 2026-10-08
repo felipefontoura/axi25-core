@@ -39,6 +39,19 @@ npx @axi25/core init my-vault
 # then open my-vault/ in your agent and type:  onboarding
 ```
 
+Already working in Claude Code, Codex, OpenCode or Pi? Install the 14 skills, then scaffold
+the vault and its `AGENTS.md` contract in the same folder:
+
+```bash
+npx skills add felipefontoura/axi25-core
+npx @axi25/core init .
+
+# then open the folder in your agent and type:  onboarding
+```
+
+Skip the second command and onboarding still runs, but it builds a thinner vault by hand: no
+`AGENTS.md`, no `docs/`, and only the three page templates it writes itself.
+
 In an existing vault:
 
 ```bash
