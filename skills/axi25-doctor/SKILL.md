@@ -141,5 +141,5 @@ then resume. Don't fail silently — guide the fix.
 - Show every command before running it. Get a yes for anything that writes, installs, or uses `sudo`.
 - Never run remote scripts you can't show the user.
 - If the user declines a dependency, respect it — explain what they lose and continue with what works.
-- On Windows, prefer `winget`; if PowerShell blocks a script, tell them to run it with
-  `-ExecutionPolicy Bypass` for that one command rather than changing global policy.
+- On Windows, prefer `winget`. If PowerShell blocks a script, explain why and let the user decide
+  how to proceed; never change the execution policy yourself.

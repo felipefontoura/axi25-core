@@ -157,6 +157,13 @@ async function main() {
     await fs.rm(scratch, { recursive: true, force: true });
   }
 
+  // the Claude Code plugin manifest must carry the same version as the npm package
+  const pkgVersion = JSON.parse(await fs.readFile(path.join(ROOT, "package.json"), "utf8")).version;
+  const pluginVersion = JSON.parse(await fs.readFile(path.join(ROOT, ".claude-plugin", "plugin.json"), "utf8")).version;
+  pluginVersion === pkgVersion
+    ? ok(`plugin.json version matches package.json (${pkgVersion})`)
+    : fail(`.claude-plugin/plugin.json version '${pluginVersion}' != package.json '${pkgVersion}'`);
+
   // Report
   for (const m of oks) process.stdout.write(`  \x1b[32m✓\x1b[0m ${m}\n`);
   for (const m of fails) process.stdout.write(`  \x1b[31m✗\x1b[0m ${m}\n`);
