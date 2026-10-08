@@ -1,0 +1,14 @@
+{
+  "name": "axi25",
+  "owner": {
+    "name": "Felipe Fontoura",
+    "url": "https://felipefontoura.com"
+  },
+  "plugins": [
+    {
+      "name": "axi25",
+      "source": "./",
+      "description": "14 agent skills that keep a personal, AI-operated knowledge vault: capture, ingest, query, journal, review."
+    }
+  ]
+}

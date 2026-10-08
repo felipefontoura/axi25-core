@@ -67,6 +67,16 @@ Want the complete, ready-to-use vault (Obsidian AI panel, docs, guided setup) in
 one? Use [`@axi25/vault`](https://github.com/felipefontoura/axi25):
 `npx @axi25/vault@latest init my-vault`.
 
+### As a Claude Code plugin
+
+```text
+/plugin marketplace add felipefontoura/axi25-core
+/plugin install axi25@axi25
+```
+
+Installs the 14 skills. As with `npx skills add`, run `npx @axi25/core init .` in your vault folder
+to get the full vault and its `AGENTS.md` contract.
+
 ## Supported harnesses
 
 | Harness | Reads | Notes |

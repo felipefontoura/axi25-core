@@ -1,0 +1,12 @@
+{
+  "name": "axi25",
+  "description": "AXI25 core: 14 agent skills that keep a personal, AI-operated knowledge vault (capture, ingest, query, journal, review). Plain Markdown, harness-agnostic.",
+  "author": {
+    "name": "Felipe Fontoura",
+    "url": "https://felipefontoura.com"
+  },
+  "homepage": "https://github.com/felipefontoura/axi25-core",
+  "repository": "https://github.com/felipefontoura/axi25-core",
+  "license": "MIT",
+  "keywords": ["second-brain", "knowledge-base", "wiki", "obsidian", "agent-skills"]
+}
