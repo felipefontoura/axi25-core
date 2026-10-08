@@ -15,5 +15,8 @@
     "wiki",
     "obsidian",
     "agent-skills"
-  ]
+  ],
+  "documentationUrl": "https://github.com/felipefontoura/axi25-core#readme",
+  "supportUrl": "https://github.com/felipefontoura/axi25-core/issues",
+  "privacyPolicyUrl": "https://github.com/felipefontoura/axi25-core#data-handling-and-privacy"
 }
