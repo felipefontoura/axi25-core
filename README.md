@@ -39,6 +39,15 @@ npx @axi25/core init my-vault
 # then open my-vault/ in your agent and type:  onboarding
 ```
 
+Already working in Claude Code, Codex, OpenCode or Pi? Install just the 14 skills; the
+`axi25-onboarding` skill scaffolds the rest of the vault on first run:
+
+```bash
+npx skills add felipefontoura/axi25-core
+
+# then open the folder in your agent and type:  onboarding
+```
+
 In an existing vault:
 
 ```bash
